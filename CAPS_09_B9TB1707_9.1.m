@@ -1,0 +1,10 @@
+A = 1;B = 7;C = 0;D = 7;
+l = .7*(A+1)*28/(B+1);
+t = 10+C+D;
+occurence=randp(l,10000000,1);
+hist(occurence,45);
+xlabel('Earthquake occurence');
+ylabel('Frequency');
+n=occurence>=t;
+p=sum(n)/length(n);
+printf("The probability is earthquakes occuring %d times or more in 28 days is %d",t,p);
